@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: fbc7e9d6157b02f49981f742c7c13b8b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - itemIcon: {instanceID: 0}
+  - itemHold: {fileID: 5091778579972948387, guid: 26b939e46df80c744b985bcad8ba1705, type: 3}
+  - itemGround: {fileID: 2006713428689626181, guid: 7d9ceb56eee9fec4ea97c7cf12a6425c, type: 3}
+  - itemHoldSprite: {instanceID: 0}
+  - itemGroundSprite: {instanceID: 0}
+  - bullet: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
