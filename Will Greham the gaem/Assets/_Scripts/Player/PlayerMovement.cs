@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     //float health;
     //[SerializeField] float maxHealth;
 
+    [SerializeField] Inventory inventory;
+    public Inventory GetInventory() { return inventory; }
+
     [Header("Camera")]
     public Transform camPos;
 

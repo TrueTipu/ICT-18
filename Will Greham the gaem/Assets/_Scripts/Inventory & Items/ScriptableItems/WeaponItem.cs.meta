@@ -5,7 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - itemIcon: {instanceID: 0}
-  - itemHold: {instanceID: 0}
+  - itemHold: {fileID: 5445951275042203847, guid: 6f2a9404baa57024daa6b58be71cb92f, type: 3}
   - itemGround: {fileID: 7635343681229203893, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
   - itemHoldSprite: {instanceID: 0}
   - itemGroundSprite: {instanceID: 0}

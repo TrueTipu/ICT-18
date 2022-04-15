@@ -10,6 +10,7 @@ public abstract class Item : ScriptableObject
     public string Name() { return itemName; }
 
     [SerializeField] Sprite itemIcon;
+    public Sprite GetItemIcon() { return itemIcon; }
 
 
     [SerializeField] GameObject itemHold;
