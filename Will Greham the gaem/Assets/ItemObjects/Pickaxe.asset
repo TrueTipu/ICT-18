@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Pickaxe
   m_EditorClassIdentifier: 
   itemName: Pikki
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 778ea331bb3a6d642b8bedf786f488ab, type: 3}
   itemHold: {fileID: 5445951275042203847, guid: 6f2a9404baa57024daa6b58be71cb92f, type: 3}
   itemGround: {fileID: 7635343681229203893, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
-  itemHoldSprite: {fileID: 0}
-  itemGroundSprite: {fileID: 0}
+  itemHoldSprite: {fileID: 21300000, guid: 778ea331bb3a6d642b8bedf786f488ab, type: 3}
+  itemGroundSprite: {fileID: 21300000, guid: 778ea331bb3a6d642b8bedf786f488ab, type: 3}
   bullet: {fileID: 0}
