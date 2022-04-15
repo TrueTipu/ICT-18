@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System;
+
 
 public class Inventory : MonoBehaviour
 {
@@ -8,7 +10,22 @@ public class Inventory : MonoBehaviour
     [SerializeField]List<Slot> slots = new List<Slot>();
     [SerializeField] List<bool> isFull = new List<bool>();
 
-    int max = 3;
+    int max = 10;
+
+    public Action<Item> ItemAdded;
+    public Action<int> ItemRemoved;
+
+    private void Awake()
+    {
+        CycleCalculator calculator = GetComponent<CycleCalculator>();
+        slots = new List<Slot>(calculator.GetSlots());
+
+        ItemAdded += AddItem;
+        ItemAdded += calculator.Increase;
+
+        ItemRemoved += RemoveItem;
+        ItemRemoved += calculator.Decrease;
+    }
 
     public bool CheckMax() //toistainen max, katsotaan tarvitaanko mihin ja kuin paljon
     {
@@ -45,7 +62,7 @@ public class Inventory : MonoBehaviour
 
     void FillSlot(Slot slot, Item item)
     {
-        InvItem invItem = Instantiate(item.GetItemHold(), slot.transform, false).GetComponent<InvItem>();
+        InvItem invItem = Instantiate(item.GetItemHold(), slot.SlotPos, false).GetComponent<InvItem>();
         invItem.itemData = item;
         slot.item = invItem;
     }

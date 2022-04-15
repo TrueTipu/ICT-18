@@ -27,7 +27,7 @@ public class WorldItem : PhysicalItem
     {
         if (!player.GetInventory().CheckMax())
         {
-            player.GetInventory().AddItem(itemData);
+            player.GetInventory().ItemAdded(itemData);
             Destroy(gameObject);
         }
         else return;
