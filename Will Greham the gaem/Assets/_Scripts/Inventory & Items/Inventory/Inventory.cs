@@ -67,5 +67,28 @@ public class Inventory : MonoBehaviour
         slot.item = invItem;
     }
 
+    private void Update()
+    {
+        if(isFull.Count > 0) ClosestItem();
+    }
+    void ClosestItem()
+    {
+        float _dis = Vector2.Distance(slots[0].SlotPos.position, Input.mousePosition);
+        int _index = 0;
+        slots[0].isPointed = false;
+        for (int i = 1; i < isFull.Count; i++)
+        {
+            float _newDis = Vector2.Distance(slots[i].SlotPos.position, Input.mousePosition);
+            if (_dis > _newDis)
+            {
+                _dis = _newDis;
+                _index = i;
+            }
+            slots[i].isPointed = false;
+        }
+        slots[_index].isPointed = true;
+
+    }
+
 }
 

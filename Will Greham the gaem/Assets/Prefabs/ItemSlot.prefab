@@ -167,6 +167,8 @@ MonoBehaviour:
   _slotPos: {fileID: 1800284559526798518}
   _slotParent: {fileID: 1800284560558518062}
   _image: {fileID: 1800284560473247434}
+  inventory: {fileID: 0}
+  number: 0
   item: {fileID: 0}
 --- !u!1 &1800284560558518063
 GameObject:
