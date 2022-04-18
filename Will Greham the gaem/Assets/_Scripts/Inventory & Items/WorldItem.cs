@@ -15,11 +15,14 @@ public class WorldItem : PhysicalItem
         Init(itemData.GetItemGroundSprite());
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            PickUp(collision.GetComponent<PlayerMovement>());
+            if (Input.GetKey(KeyCode.E))
+            {
+                PickUp(collision.GetComponent<PlayerMovement>());
+            }
         }
     }
 
@@ -32,10 +35,5 @@ public class WorldItem : PhysicalItem
         }
         else return;
     }
-    //siirrä myöhemmin toiseen scriptiin
-    //void SpawnNewWorldItem()
-    //{
-    //    WorldItem _newItem = Instantiate(itemData.GetItemGround(), transform).GetComponent<WorldItem>();
-    //    _newItem.itemData = itemData;
-    //}
+
 }

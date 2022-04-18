@@ -15,13 +15,20 @@ public class PlayerMovement : MonoBehaviour
     //float health;
     //[SerializeField] float maxHealth;
 
+    [SerializeField] GameObject handPos;
+    [SerializeField] HoldItem handItem;
+
     [SerializeField] Inventory inventory;
     public Inventory GetInventory() { return inventory; }
 
     [Header("Camera")]
     public Transform camPos;
 
-
+    private void Start()
+    {
+        inventory.Init(this, handItem);
+        inventory.gameObject.SetActive(false);
+    }
 
     private void Update()
     {
@@ -29,7 +36,15 @@ public class PlayerMovement : MonoBehaviour
         dir = Input.GetAxisRaw("Horizontal");
         dirY = Input.GetAxisRaw("Vertical");
 
-
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            inventory.gameObject.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            inventory.gameObject.SetActive(false);
+        }
+        
     }
 
     //liikuttaa pelaajaa inputin mukaan

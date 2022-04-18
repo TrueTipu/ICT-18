@@ -3,7 +3,7 @@ using System.Collections;
 
 public class InvItem : PhysicalItem
 {
-    
+    public int id;
     private void Start()
     {
         StartCoroutine(LateStart());

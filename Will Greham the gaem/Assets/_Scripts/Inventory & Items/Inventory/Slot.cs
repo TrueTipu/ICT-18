@@ -48,11 +48,20 @@ public class Slot : MonoBehaviour
     {
         if (isPointed)
         {
-            Debug.Log("moi");
             _image.color = Color.black;
+            if (Input.GetMouseButtonDown(1))
+            {
+                //siirrä inventoryn sisälle funktioon
+
+                WorldItem _newItem = Instantiate(item.itemData.GetItemGround(), inventory.Player.transform.position, Quaternion.identity).GetComponent<WorldItem>();
+                _newItem.itemData = item.itemData;
+
+                inventory.ItemRemoved(number);
+
+            }
             if (Input.GetMouseButtonDown(0))
             {
-                inventory.ItemRemoved(number);
+                inventory.ChangeHoldItem(item);
             }
         }
         else
@@ -60,5 +69,6 @@ public class Slot : MonoBehaviour
             _image.color = defaultColor;
         }
     }
+
 
 }

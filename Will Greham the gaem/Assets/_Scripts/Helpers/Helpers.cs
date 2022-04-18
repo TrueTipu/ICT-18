@@ -14,4 +14,10 @@ public class Helpers : MonoBehaviour
         Vector3 worldPos = camera.ScreenToWorldPoint(pos);
         return new Vector3(worldPos.x, worldPos.y, pos.z);
     }
+
+    public static Vector3 WorldToScreenpoint(Vector3 pos)
+    {
+        Vector3 worldPos = camera.WorldToScreenPoint(pos);
+        return new Vector3(worldPos.x, worldPos.y, 0);
+    }
 }

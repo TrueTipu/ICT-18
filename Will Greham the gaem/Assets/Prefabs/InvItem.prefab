@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 421542158837775764}
   - component: {fileID: 8230637627723065720}
   m_Layer: 5
-  m_Name: ItemIcon
+  m_Name: InvItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

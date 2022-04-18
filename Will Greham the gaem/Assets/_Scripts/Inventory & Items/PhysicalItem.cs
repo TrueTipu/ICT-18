@@ -9,7 +9,7 @@ public abstract class PhysicalItem : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Image image;
 
-    protected void Init(Sprite sprite)
+    protected virtual void Init(Sprite sprite)
     {
         if(TryGetComponent<SpriteRenderer>(out SpriteRenderer spriteRenderer)) spriteRenderer.sprite = sprite;
         else if (TryGetComponent<Image>(out Image image)) image.sprite = sprite;

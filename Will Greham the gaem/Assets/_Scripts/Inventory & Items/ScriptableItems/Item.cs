@@ -13,6 +13,9 @@ public abstract class Item : ScriptableObject
     public Sprite GetItemIcon() { return itemIcon; }
 
 
+    [SerializeField] GameObject itemInv;
+    public GameObject GetItemInv() { return itemInv; }
+
     [SerializeField] GameObject itemHold;
     public GameObject GetItemHold() { return itemHold; }
 

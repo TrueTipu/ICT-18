@@ -15,6 +15,10 @@ public class Inventory : MonoBehaviour
     public Action<Item> ItemAdded;
     public Action<int> ItemRemoved;
 
+    public PlayerMovement Player { get; private set; }
+    public HoldItem HoldItem { get; private set; }
+
+
     private void Awake()
     {
         CycleCalculator calculator = GetComponent<CycleCalculator>();
@@ -27,10 +31,26 @@ public class Inventory : MonoBehaviour
         ItemRemoved += calculator.Decrease;
     }
 
+    private void CheckHold(InvItem item)
+    {
+        if(HoldItem.id == item.id)
+        {
+            ChangeHoldItem(null);
+        }
+    }
+
+    public void Init(PlayerMovement _player, HoldItem _holdItem)
+    {
+        Player = _player;
+        HoldItem = _holdItem;
+    }
+
     public bool CheckMax() //toistainen max, katsotaan tarvitaanko mihin ja kuin paljon
     {
         return isFull.Count >= max;
     }
+
+
 
     public void AddItem(Item item)
     {
@@ -42,6 +62,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(int index)
     {
+        CheckHold(slots[index].item);
         isFull[index] = false;
         Destroy(slots[index].item.gameObject); //vaiha EHKÄ ? järkevämmäks
 
@@ -62,14 +83,30 @@ public class Inventory : MonoBehaviour
 
     void FillSlot(Slot slot, Item item)
     {
-        InvItem invItem = Instantiate(item.GetItemHold(), slot.SlotPos, false).GetComponent<InvItem>();
+        InvItem invItem = Instantiate(item.GetItemInv(), slot.SlotPos, false).GetComponent<InvItem>();
         invItem.itemData = item;
         slot.item = invItem;
+        invItem.id = invItem.itemData.GetInstanceID();
+    }
+
+    public void ChangeHoldItem(InvItem item)
+    {
+        if(item == null)
+        {
+            HoldItem.gameObject.SetActive(false);
+            return;
+        }
+        HoldItem.itemData = item.itemData;
+        HoldItem.gameObject.SetActive(true);
+        HoldItem.CallInit(item.itemData.GetItemHoldSprite());
+        HoldItem.id = item.id;
     }
 
     private void Update()
     {
         if(isFull.Count > 0) ClosestItem();
+
+        transform.position = Helpers.WorldToScreenpoint(Player.transform.position);
     }
     void ClosestItem()
     {
