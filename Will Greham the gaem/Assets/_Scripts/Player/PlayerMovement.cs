@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (handItem.itemData.itemType == Item.ItemType.Weapon)
             {
-                damageData = handItem.GetComponent<WeaponItem>().damageData;
+                damageData = handItem.itemData.GetWeapon().damageData;
             }
         }
 
