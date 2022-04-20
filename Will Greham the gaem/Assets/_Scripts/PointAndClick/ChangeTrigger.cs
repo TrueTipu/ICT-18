@@ -22,13 +22,11 @@ public class ChangeTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("moi");
         Cursor.SetCursor(mouseOverSprite.texture, Vector2.zero, CursorMode.Auto);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("heippa");
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 

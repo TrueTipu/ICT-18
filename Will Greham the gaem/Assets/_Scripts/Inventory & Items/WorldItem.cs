@@ -19,7 +19,7 @@ public class WorldItem : PhysicalItem
     {
         if (collision.CompareTag("Player"))
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 PickUp(collision.GetComponent<PlayerMovement>());
             }

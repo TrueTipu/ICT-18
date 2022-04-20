@@ -13,5 +13,11 @@ public class WeaponItem : Item
     [Header("Weapon")]
     [SerializeField] float hitRange;
 
-    void Hit() { return; }
+    public DamageData damageData;
+}
+[System.Serializable]
+public class DamageData
+{
+    [SerializeField] public int damage;
+    [SerializeField] public float radius;
 }

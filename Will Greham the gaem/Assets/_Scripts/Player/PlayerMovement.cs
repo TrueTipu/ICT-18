@@ -19,10 +19,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] HoldItem handItem;
 
     [SerializeField] Inventory inventory;
+
+
     public Inventory GetInventory() { return inventory; }
 
     [Header("Camera")]
     public Transform camPos;
+
+
+    [Header("Attack")]
+    [SerializeField] DamageData damageData;
+
+    [SerializeField] Transform hitPos;
+    [SerializeField] LayerMask layer;
 
     private void Start()
     {
@@ -44,9 +53,26 @@ public class PlayerMovement : MonoBehaviour
         {
             inventory.gameObject.SetActive(false);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Hit();
+        }
         
     }
+    void Hit()
+    {
+        if (handItem.itemData != null)
+        {
+            if (handItem.itemData.itemType == Item.ItemType.Weapon)
+            {
+                damageData = handItem.GetComponent<WeaponItem>().damageData;
+            }
+        }
 
+        Collider2D hit = Physics2D.OverlapCircle(hitPos.transform.position, damageData.radius, layer);
+        if(hit != null) hit.GetComponent<IHittable>().TakeDamage(damageData);
+    }
     //liikuttaa pelaajaa inputin mukaan
     private void FixedUpdate()
     {
