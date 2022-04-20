@@ -7,11 +7,15 @@ public class BasicDestroyable : MonoBehaviour, IHittable
 
     public void TakeDamage(DamageData damage)
     {
-        hp -= damage.damage;
-
-        if(hp < 0)
+        if(damage.type == DamageData.WeaponType.Medium)
         {
-            Destroy(gameObject);
+            hp -= damage.damage;
+
+            if (hp < 0)
+            {
+                Destroy(gameObject);
+            }
         }
+
     }
 }

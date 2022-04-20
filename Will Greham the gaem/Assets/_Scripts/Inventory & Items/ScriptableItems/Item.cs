@@ -32,6 +32,8 @@ public abstract class Item : ScriptableObject
 
 
 
+    public virtual WeaponItem GetWeapon() { return null; }
+
     public abstract ItemType itemType { get; protected set; }
 
     public enum ItemType

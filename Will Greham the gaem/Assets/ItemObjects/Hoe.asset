@@ -20,3 +20,7 @@ MonoBehaviour:
   itemHoldSprite: {fileID: 21300000, guid: f26fd1dc722136f458cbb3eeaa96cf00, type: 3}
   itemGroundSprite: {fileID: 21300000, guid: f26fd1dc722136f458cbb3eeaa96cf00, type: 3}
   hitRange: 0
+  damageData:
+    damage: 0
+    radius: 0
+    type: 1
