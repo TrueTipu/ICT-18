@@ -62,16 +62,29 @@ public class PlayerMovement : MonoBehaviour
     }
     void Hit()
     {
+        DamageData _dData = damageData;
         if (handItem.itemData != null)
         {
             if (handItem.itemData.itemType == Item.ItemType.Weapon)
             {
-                damageData = handItem.itemData.GetWeapon().damageData;
+                _dData = handItem.itemData.GetWeapon().damageData;
+            }
+            if (handItem.itemData.itemType == Item.ItemType.Gun)
+            {
+                Shoot(handItem.itemData.GetGun().damageData);
+                return;
             }
         }
+       
 
         Collider2D hit = Physics2D.OverlapCircle(hitPos.transform.position, damageData.radius, layer);
-        if(hit != null) hit.GetComponent<IHittable>().TakeDamage(damageData);
+        Debug.Log(_dData);
+        if(hit != null) hit.GetComponent<IHittable>().TakeDamage(_dData);
+    }
+
+    void Shoot(DamageData damageData)
+    {
+        Debug.Log("shoot");
     }
     //liikuttaa pelaajaa inputin mukaan
     private void FixedUpdate()

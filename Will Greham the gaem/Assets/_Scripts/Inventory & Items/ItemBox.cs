@@ -1,38 +1,35 @@
-﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class WorldItem : PhysicalItem
+public class ItemBox : PhysicalItem
 {
     bool inTouch = false;
     Collider2D collider;
-    private void Start()
-    {
-        StartCoroutine(LateStart());
-    }
+
     protected override IEnumerator LateStart()
     {
         yield return null;
-        Init(itemData.GetItemGroundSprite());
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+
+        if (collision.collider.CompareTag("Player"))
         {
             inTouch = true;
-            collider = collision;
+            collider = collision.collider;
         }
-        
+
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
             inTouch = false;
         }
 
     }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && inTouch == true)
@@ -40,15 +37,13 @@ public class WorldItem : PhysicalItem
             PickUp(collider.GetComponent<PlayerMovement>());
         }
     }
-
     void PickUp(PlayerMovement player)
     {
         if (!player.GetInventory().CheckMax())
         {
             player.GetInventory().ItemAdded(itemData);
-            Destroy(gameObject);
+            this.enabled = false;
         }
         else return;
     }
-
 }

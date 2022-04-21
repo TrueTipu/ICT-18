@@ -16,6 +16,5 @@ public class BasicDestroyable : MonoBehaviour, IHittable
                 Destroy(gameObject);
             }
         }
-
     }
 }

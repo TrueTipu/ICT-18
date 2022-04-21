@@ -32,4 +32,9 @@ public class DamageData
         Medium,
         Strong
     }
+
+    public override string ToString()
+    {
+        return type.ToString() + " " + radius.ToString();
+    }
 }

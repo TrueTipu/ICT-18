@@ -14,5 +14,6 @@ public class GunItem : Item
     [Header("Gun")]
     [SerializeField] GameObject bullet;
 
-    void Shoot() { return; }
+
+    public DamageData damageData;
 }
