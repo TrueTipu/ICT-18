@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WorldItem : PhysicalItem
+public class WorldItem : PhysicalItem, ButtonIcon
 {
     bool inTouch = false;
     Collider2D collider;
@@ -9,6 +9,14 @@ public class WorldItem : PhysicalItem
     {
         StartCoroutine(LateStart());
     }
+
+    [SerializeField] GameObject _iconObject;
+    public GameObject IconObect
+    {
+        get { return _iconObject; }
+        private set { _iconObject = value; }
+    }
+
     protected override IEnumerator LateStart()
     {
         yield return null;
@@ -39,6 +47,15 @@ public class WorldItem : PhysicalItem
         {
             PickUp(collider.GetComponent<PlayerMovement>());
         }
+
+        if (inTouch)
+        {
+            ShowIcon();
+        }
+        else
+        {
+            HideIcon();
+        }
     }
 
     void PickUp(PlayerMovement player)
@@ -51,4 +68,13 @@ public class WorldItem : PhysicalItem
         else return;
     }
 
+    public void ShowIcon()
+    {
+        IconObect.SetActive(true);
+    }
+
+    public void HideIcon()
+    {
+        IconObect.SetActive(false);
+    }
 }

@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemBox : PhysicalItem
+public class ItemBox : PhysicalItem, ButtonIcon
 {
     bool inTouch = false;
     Collider2D collider;
+
+    [SerializeField]GameObject _iconObject;
+    public GameObject IconObect {
+        get { return _iconObject; }
+        private set { _iconObject = value; }
+    }
+
+
 
     protected override IEnumerator LateStart()
     {
@@ -36,6 +44,14 @@ public class ItemBox : PhysicalItem
         {
             PickUp(collider.GetComponent<PlayerMovement>());
         }
+        if (inTouch)
+        {
+            ShowIcon();
+        }
+        else
+        {
+            HideIcon();
+        }
     }
     void PickUp(PlayerMovement player)
     {
@@ -45,5 +61,15 @@ public class ItemBox : PhysicalItem
             this.enabled = false;
         }
         else return;
+    }
+
+    public void ShowIcon()
+    {
+        IconObect.SetActive(true);
+    }
+
+    public void HideIcon()
+    {
+        IconObect.SetActive(false);
     }
 }

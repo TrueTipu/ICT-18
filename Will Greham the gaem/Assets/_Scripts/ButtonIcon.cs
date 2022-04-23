@@ -4,7 +4,9 @@ using System.Collections;
 
 public interface ButtonIcon
 {
-    public GameObject IconObect { get; set; }
+   GameObject IconObect { get; }
 
-    public void ShowIcon();
+    void ShowIcon();
+
+    void HideIcon();
 }
