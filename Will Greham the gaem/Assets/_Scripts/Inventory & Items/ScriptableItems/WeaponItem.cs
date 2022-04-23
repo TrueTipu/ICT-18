@@ -25,12 +25,12 @@ public class DamageData
 
     [SerializeField] public WeaponType type;
 
-
+    
     public enum WeaponType
     {
-        Weak,
-        Medium,
-        Strong
+        Weak = 1,
+        Medium = 2,
+        Strong =4
     }
 
     public override string ToString()
