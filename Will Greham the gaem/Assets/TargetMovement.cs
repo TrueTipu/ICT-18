@@ -3,7 +3,21 @@ using System.Collections.Generic;
 using UnityEngine; 
 public class TargetMovement : MonoBehaviour {
     [SerializeField] Transform[] waypoints;
-    [SerializeField] float moveSpeed = 2f; 
+    [SerializeField] float moveSpeed = 2f;
+
+    [SerializeField] GameObject view;
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            //restart
+            print("kuolit");
+        }
+    }
+
+
     int waypointIndex = 0; 
     void Start() { 
         transform.position = waypoints[waypointIndex].transform.position; } 
