@@ -6,4 +6,5 @@ using TMPro;
 public class CanvasHelper : StaticInstance<CanvasHelper>
 {
     public TextMeshProUGUI text;
+    public GameObject textBc;
 }
