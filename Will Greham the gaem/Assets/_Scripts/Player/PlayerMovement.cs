@@ -33,10 +33,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform hitPos;
     [SerializeField] LayerMask layer;
 
+    [SerializeField] List<Item> startItems;
+
+
     private void Start()
     {
         inventory.Init(this, handItem);
         inventory.gameObject.SetActive(false);
+
+        foreach (Item item in startItems)
+        {
+            GetInventory().ItemAdded(item);
+        }
     }
 
     private void Update()
@@ -44,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         //ker‰‰ liikeinputin
         dir = Input.GetAxisRaw("Horizontal");
         dirY = Input.GetAxisRaw("Vertical");
+
+        DirManager();
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -80,6 +90,25 @@ public class PlayerMovement : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(hitPos.transform.position, damageData.radius, layer);
         Debug.Log(_dData);
         if(hit != null) hit.GetComponent<IHittable>().TakeDamage(_dData);
+    }
+
+    void DirManager()
+    {
+        if(dir > 0) {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else if (dir < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 180);
+        }
+        else if (dirY > 0)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 90);
+        }
+        else if (dirY < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 270);
+        }
     }
 
     void Shoot(DamageData damageData)
