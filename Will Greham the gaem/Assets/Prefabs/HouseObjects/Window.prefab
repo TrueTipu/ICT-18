@@ -124,3 +124,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 5
   typeReq: 2
+  _data:
+    Name: Ikkuna rikottu

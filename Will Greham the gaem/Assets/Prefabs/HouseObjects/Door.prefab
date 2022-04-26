@@ -125,6 +125,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 1
   _iconObject: {fileID: 6619966154985259067}
+  _data:
+    Name: Ovi murrettu
+  _data2:
+    Name: Ovi tuhottu
 --- !u!1 &6619966154985259067
 GameObject:
   m_ObjectHideFlags: 0

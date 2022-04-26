@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BasicDestroyable : MonoBehaviour, IHittable
+public class BasicDestroyable : MonoBehaviour, IHittable, SendData
 {
     [SerializeField]int hp;
     [SerializeField] DamageData.WeaponType typeReq;
+
+    [SerializeField] MissionData _data;
+
+    public MissionData data { get { return _data; } }
 
     public void TakeDamage(DamageData damage)
     {
@@ -15,6 +19,7 @@ public class BasicDestroyable : MonoBehaviour, IHittable
 
             if (hp < 0)
             {
+                MissionDataManager.Instance.AddData(data);
                 Destroy(gameObject);
             }
         }

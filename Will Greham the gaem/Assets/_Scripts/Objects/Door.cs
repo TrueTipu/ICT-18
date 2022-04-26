@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour, IHittable, ButtonIcon
+public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
 {
     bool inTouch = false;
     Collider2D collider;
@@ -16,10 +16,17 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon
         private set { _iconObject = value; }
     }
 
+    [SerializeField]MissionData _data;
+    [SerializeField] MissionData _data2;
+
+    public MissionData data { get { return _data; } }
+    public MissionData data2 { get { return _data2; } }
+
     public void HideIcon()
     {
         IconObect.SetActive(false);
     }
+
 
     public void ShowIcon()
     {
@@ -32,6 +39,7 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon
         {
             locked = false;
             Debug.Log("rikki");
+            MissionDataManager.Instance.AddData(data);
             //t‰h‰n hajoamisanimaatio/‰‰ni
         }
         else if (damage.type == DamageData.WeaponType.Medium || damage.type == DamageData.WeaponType.Strong)
@@ -39,6 +47,7 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon
             //hajoa
             Debug.Log("pum");
             Destroy(gameObject);
+            MissionDataManager.Instance.AddData(data2);
         }
     }
 
