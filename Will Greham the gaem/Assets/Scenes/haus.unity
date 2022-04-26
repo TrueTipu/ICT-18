@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 598439168}
   - component: {fileID: 598439170}
   - component: {fileID: 598439171}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 626631555}
   - component: {fileID: 626631554}
   - component: {fileID: 626631553}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Huonekalu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 744937688}
   - component: {fileID: 744937687}
   - component: {fileID: 744937686}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 797697383}
   - component: {fileID: 797697382}
   - component: {fileID: 797697381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 861191410}
   - component: {fileID: 861191412}
   - component: {fileID: 861191411}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Huonekalu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052584430}
   - component: {fileID: 1052584432}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 1082885322}
   - component: {fileID: 1082885321}
   - component: {fileID: 1082885324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1750,7 +1750,7 @@ GameObject:
   - component: {fileID: 1164452981}
   - component: {fileID: 1164452980}
   - component: {fileID: 1164452983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2008,7 +2008,7 @@ GameObject:
   - component: {fileID: 1196035997}
   - component: {fileID: 1196035999}
   - component: {fileID: 1196035998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Huonekalu (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,7 +2117,7 @@ GameObject:
   - component: {fileID: 1244573987}
   - component: {fileID: 1244573989}
   - component: {fileID: 1244573988}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Huonekalu (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2413,7 +2413,7 @@ GameObject:
   - component: {fileID: 1368950464}
   - component: {fileID: 1368950466}
   - component: {fileID: 1368950465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Huonekalu (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2523,7 +2523,7 @@ GameObject:
   - component: {fileID: 1476624400}
   - component: {fileID: 1476624399}
   - component: {fileID: 1476624402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2659,7 +2659,7 @@ GameObject:
   - component: {fileID: 1479093374}
   - component: {fileID: 1479093376}
   - component: {fileID: 1479093377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2874,7 +2874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505904745}
   - component: {fileID: 1505904746}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3015,7 +3015,7 @@ GameObject:
   - component: {fileID: 1556965610}
   - component: {fileID: 1556965609}
   - component: {fileID: 1556965608}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3511,7 +3511,7 @@ GameObject:
   - component: {fileID: 1783331763}
   - component: {fileID: 1783331765}
   - component: {fileID: 1783331766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3647,7 +3647,7 @@ GameObject:
   - component: {fileID: 1817411953}
   - component: {fileID: 1817411955}
   - component: {fileID: 1817411956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4037,7 +4037,7 @@ GameObject:
   - component: {fileID: 1899720651}
   - component: {fileID: 1899720650}
   - component: {fileID: 1899720649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Huonekalu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4146,7 +4146,7 @@ GameObject:
   - component: {fileID: 1924717598}
   - component: {fileID: 1924717600}
   - component: {fileID: 1924717599}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Huonekalu (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4256,7 +4256,7 @@ GameObject:
   - component: {fileID: 1944066523}
   - component: {fileID: 1944066522}
   - component: {fileID: 1944066525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

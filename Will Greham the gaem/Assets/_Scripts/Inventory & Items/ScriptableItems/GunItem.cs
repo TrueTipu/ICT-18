@@ -15,5 +15,7 @@ public class GunItem : Item
     [SerializeField] GameObject bullet;
 
 
+    public override GunItem GetGun() { return this; }
+
     public DamageData damageData;
 }

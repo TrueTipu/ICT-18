@@ -3,5 +3,5 @@ using System.Collections;
 
 public interface IHittable
 {
-    public void TakeDamage(DamageData damage);
+    void TakeDamage(DamageData damage);
 }

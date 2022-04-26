@@ -89,7 +89,12 @@ public class PlayerMovement : MonoBehaviour
 
         Collider2D hit = Physics2D.OverlapCircle(hitPos.transform.position, damageData.radius, layer);
         Debug.Log(_dData);
-        if(hit != null) hit.GetComponent<IHittable>().TakeDamage(_dData);
+        if (hit != null)
+        {
+            IHittable hittable;
+            hit.transform.TryGetComponent<IHittable>(out hittable);
+            hittable?.TakeDamage(_dData);
+        }
     }
 
     void DirManager()
@@ -111,9 +116,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Shoot(DamageData damageData)
+    void Shoot(DamageData _dData)
     {
-        Debug.Log("shoot");
+        //käytän hitposia, kannattaa vaihtaa varmaa
+        RaycastHit2D hit = Physics2D.Raycast(hitPos.position, hitPos.right, _dData.radius, layer);
+        Debug.Log(_dData);
+        if (hit)
+        {
+            IHittable hittable;
+            hit.transform.TryGetComponent<IHittable>(out hittable);
+            hittable?.TakeDamage(_dData);
+        }
     }
     //liikuttaa pelaajaa inputin mukaan
     private void FixedUpdate()
