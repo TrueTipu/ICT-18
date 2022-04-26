@@ -1887,12 +1887,12 @@ GameObject:
   - component: {fileID: 1177001806}
   - component: {fileID: 1177001807}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Katto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1177001804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3207,6 +3207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laatikko
       objectReference: {fileID: 0}
+    - target: {fileID: 7503601794370742014, guid: a52eb0e38ecda6748ba7b1a8285eb8df, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: fcc1ed679f35f834ba31f9b4ae002a4a, type: 2}
     - target: {fileID: 7503601794370742015, guid: a52eb0e38ecda6748ba7b1a8285eb8df, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -3264,6 +3268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laatikko (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7503601794370742014, guid: a52eb0e38ecda6748ba7b1a8285eb8df, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 900e5e277ddbcb741b2042396296f5a9, type: 2}
     - target: {fileID: 7503601794370742015, guid: a52eb0e38ecda6748ba7b1a8285eb8df, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -3353,7 +3361,7 @@ GameObject:
   - component: {fileID: 1763082768}
   - component: {fileID: 1763082766}
   - component: {fileID: 1763082767}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kohde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3377,7 +3385,10 @@ MonoBehaviour:
   - {fileID: 1493769165}
   - {fileID: 1311813630}
   moveSpeed: 2
-  view: {fileID: 0}
+  _data:
+    Name: 'Murhattiin aseella: '
+  _data2:
+    Name: 
 --- !u!60 &1763082767
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3403,10 +3414,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.4702034, y: 0.47584307}
-      - {x: 0.48329234, y: -0.45530486}
-      - {x: 2.2850904, y: -0.8453765}
-      - {x: 2.2216659, y: 1.0020213}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.8, y: 2.2}
+      - {x: 0.8, y: 2.2}
 --- !u!61 &1763082768
 BoxCollider2D:
   m_ObjectHideFlags: 0

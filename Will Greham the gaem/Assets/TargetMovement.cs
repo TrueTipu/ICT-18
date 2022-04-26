@@ -1,11 +1,11 @@
 using System.Collections; 
 using System.Collections.Generic; 
 using UnityEngine; 
-public class TargetMovement : MonoBehaviour {
+public class TargetMovement : MonoBehaviour, IHittable, SendData
+{
     [SerializeField] Transform[] waypoints;
     [SerializeField] float moveSpeed = 2f;
 
-    [SerializeField] GameObject view;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +18,14 @@ public class TargetMovement : MonoBehaviour {
     }
 
 
-    int waypointIndex = 0; 
+    int waypointIndex = 0;
+
+    [SerializeField] MissionData _data;
+    [SerializeField] MissionData _data2;
+
+    public MissionData data { get { return _data; } private set { _data = value; } }
+    public MissionData data2 { get { return _data2; } }
+
     void Start() { 
         transform.position = waypoints[waypointIndex].transform.position; } 
     void Update() { 
@@ -45,5 +52,22 @@ public class TargetMovement : MonoBehaviour {
         if (waypointIndex == waypoints.Length) waypointIndex = 0;
 
 
-    } 
+    }
+
+    public void TakeDamage(DamageData damage)
+    {
+        if(damage.type >= DamageData.WeaponType.Medium)
+        {
+            data.Name = (data.Name + damage.weaponName);
+            Debug.Log(damage.weaponName);
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        print("död");
+        MissionDataManager.Instance.AddData(data);
+        Destroy(gameObject);
+    }
 }

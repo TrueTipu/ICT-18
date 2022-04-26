@@ -120,6 +120,7 @@ MonoBehaviour:
   damageData:
     damage: 2
     radius: 1
+    weaponName: Hand
     type: 1
   hitPos: {fileID: 3372923420125126866}
   layer:

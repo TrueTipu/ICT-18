@@ -22,9 +22,9 @@ public class DamageData
 {
     [SerializeField] public int damage;
     [SerializeField] public float radius;
+    [SerializeField] public string weaponName;
 
     [SerializeField] public WeaponType type;
-
     
     public enum WeaponType
     {

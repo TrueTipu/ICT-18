@@ -35,14 +35,14 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
 
     public void TakeDamage(DamageData damage)
     {
-        if (damage.type == DamageData.WeaponType.Weak && locked)
+        if (damage.type <= DamageData.WeaponType.Medium && locked)
         {
             locked = false;
             Debug.Log("rikki");
             MissionDataManager.Instance.AddData(data);
             //tähän hajoamisanimaatio/ääni
         }
-        else if (damage.type == DamageData.WeaponType.Medium || damage.type == DamageData.WeaponType.Strong)
+        else if (damage.type >= DamageData.WeaponType.Strong)
         {
             //hajoa
             Debug.Log("pum");

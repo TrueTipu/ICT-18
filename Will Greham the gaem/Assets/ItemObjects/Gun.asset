@@ -23,4 +23,5 @@ MonoBehaviour:
   damageData:
     damage: 5
     radius: 10
-    type: 2
+    weaponName: SimpleGun
+    type: 4
