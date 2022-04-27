@@ -23,5 +23,5 @@ MonoBehaviour:
   damageData:
     damage: 5
     radius: 10
-    weaponName: SimpleGun
+    weaponName: Pyssy
     type: 4
