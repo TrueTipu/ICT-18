@@ -15,23 +15,41 @@ public abstract class TextManager : MonoBehaviour
     }
 
     [SerializeField] protected string[] lines;
-    [SerializeField] protected bool textActive;
+    [SerializeField] protected static bool textActive;
 
+
+    [SerializeField] protected bool localText;
 
 
     int lineIndex;
 
+
+    private void Update()
+    {
+        if (textActive == true)
+        {
+            Invoke("Close", 3f);
+        }
+        else CancelInvoke();
+    }
     protected void Open()
     {
+        localText = true;
         textActive = true;
         lineIndex = 0;
         textBc.gameObject.SetActive(true);
         text.text = lines[lineIndex];
     }
+    protected static void Open(string text)
+    {
+        textActive = true;
+        CanvasHelper.Instance.textBc.gameObject.SetActive(true);
+        CanvasHelper.Instance.text.text = text;
+    }
 
     protected void ChangeLine()
     {
-        if (!textActive) return;
+        if (!localText) return;
         lineIndex += 1;
         if (lineIndex < lines.Length)
         {
@@ -42,6 +60,7 @@ public abstract class TextManager : MonoBehaviour
 
     protected void Close()
     {
+        localText = false;
         textActive = false;
         lineIndex = 0;
         textBc.gameObject.SetActive(false);

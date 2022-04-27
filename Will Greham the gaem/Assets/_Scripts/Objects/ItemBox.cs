@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemBox : PhysicalItem, ButtonIcon
+public class ItemBox : PhysicalItem, ButtonIcon, SendData
 {
     bool inTouch = false;
     Collider2D collider;
@@ -12,7 +12,9 @@ public class ItemBox : PhysicalItem, ButtonIcon
         get { return _iconObject; }
         private set { _iconObject = value; }
     }
+    [SerializeField] MissionData _data;
 
+    public MissionData data { get { return _data; } private set { _data = value; } }
 
 
     protected override IEnumerator LateStart()
@@ -59,6 +61,8 @@ public class ItemBox : PhysicalItem, ButtonIcon
         {
             player.GetInventory().ItemAdded(itemData);
             this.enabled = false;
+            data.Name = data.Name + itemData.Name();
+            MissionDataManager.Instance.AddData(data);
         }
         else return;
     }

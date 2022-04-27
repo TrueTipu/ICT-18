@@ -23,5 +23,5 @@ MonoBehaviour:
   damageData:
     damage: 5
     radius: 2
-    weaponName: Sword
+    weaponName: Miekka
     type: 2

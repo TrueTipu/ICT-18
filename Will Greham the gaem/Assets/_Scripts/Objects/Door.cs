@@ -38,7 +38,7 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
         if (damage.type <= DamageData.WeaponType.Medium && locked)
         {
             locked = false;
-            Debug.Log("rikki");
+            TextBoxActivator.Guide("Mursit oven.");
             MissionDataManager.Instance.AddData(data);
             //tähän hajoamisanimaatio/ääni
         }
@@ -77,11 +77,13 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
             if (locked) //lisää tähän avain myöhempiin kenttiin
             {
                 Debug.Log("kiinni");
+                TextBoxActivator.Guide("Ovi on lukossa.");
             }
             else
             {
                 //aukea
                 Debug.Log("auki");
+                TextBoxActivator.Guide("Avasit oven.");
                 Destroy(gameObject);
             }
         }

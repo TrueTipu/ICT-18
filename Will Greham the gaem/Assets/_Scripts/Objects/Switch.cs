@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Switch : MonoBehaviour, ButtonIcon
+public class Switch : MonoBehaviour, ButtonIcon, SendData
 {
     bool inTouch = false;
     Collider2D collider;
@@ -11,6 +11,12 @@ public class Switch : MonoBehaviour, ButtonIcon
 
 
     [SerializeField] GameObject _iconObject;
+
+    [SerializeField] MissionData _data;
+
+    bool first = false;
+
+    public MissionData data { get { return _data; } private set { _data = value; } }
     public GameObject IconObect
     {
         get { return _iconObject; }
@@ -38,7 +44,13 @@ public class Switch : MonoBehaviour, ButtonIcon
     {
         if (Input.GetKeyDown(KeyCode.E) && inTouch == true)
         {
-            light.SetActive(true); //vaihda eventiksi multiusageen
+            light.SetActive(!light.activeSelf); //vaihda eventiksi multiusageen
+            if (!first)
+            {
+                first = true;
+                MissionDataManager.Instance.AddData(data);
+            }
+
         }
 
         if (inTouch)

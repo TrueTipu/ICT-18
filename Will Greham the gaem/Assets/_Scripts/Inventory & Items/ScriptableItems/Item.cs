@@ -6,7 +6,7 @@ public abstract class Item : ScriptableObject
 {
     [Header("General")]
 
-    [SerializeField] string itemName;
+    [SerializeField]string itemName;
     public string Name() { return itemName; }
 
     [SerializeField] Sprite itemIcon;

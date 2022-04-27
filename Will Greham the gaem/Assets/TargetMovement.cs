@@ -54,12 +54,29 @@ public class TargetMovement : MonoBehaviour, IHittable, SendData
 
     }
 
+    Transform Distances()
+    {
+        Transform _closest = waypoints[0];
+        float _closeDis = 1000000000;
+        foreach (Transform wayPoint in waypoints)
+        {
+            float dis = Vector2.Distance(wayPoint.position, transform.position);
+            if(dis < _closeDis)
+            {
+                _closeDis = dis;
+                _closest = wayPoint;
+            }
+        }
+        return _closest;
+    }
+
     public void TakeDamage(DamageData damage)
     {
         if(damage.type >= DamageData.WeaponType.Medium)
         {
             data.Name = (data.Name + damage.weaponName);
             Debug.Log(damage.weaponName);
+            data2.Name = (data2.Name + Distances().name);
             Die();
         }
     }
@@ -68,6 +85,8 @@ public class TargetMovement : MonoBehaviour, IHittable, SendData
     {
         print("död");
         MissionDataManager.Instance.AddData(data);
+        MissionDataManager.Instance.AddData(data2);
+        Game_Manager.Instance.Win();
         Destroy(gameObject);
     }
 }

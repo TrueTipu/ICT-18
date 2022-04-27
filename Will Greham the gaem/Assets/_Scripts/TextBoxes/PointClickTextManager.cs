@@ -18,7 +18,6 @@ public class PointClickTextManager : TextManager, IPointerClickHandler, IPointer
         if(textActive == false)
         {
             Open();
-            Invoke("Close", 3);
         }
     }
 

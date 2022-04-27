@@ -23,5 +23,5 @@ MonoBehaviour:
   damageData:
     damage: 3
     radius: 1
-    weaponName: Knife
+    weaponName: Puukko
     type: 2
