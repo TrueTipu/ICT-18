@@ -83,7 +83,6 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
             {
                 //aukea
                 Debug.Log("auki");
-                TextBoxActivator.Guide("Avasit oven.");
                 Destroy(gameObject);
             }
         }

@@ -11,6 +11,11 @@ public class MissionDataManager : Singleton<MissionDataManager>
 
     [SerializeField] Transform panel;
 
+    public List<MissionData> getData()
+    {
+        return missionDatas;
+    }
+
     public void AddData(MissionData data)
     {
         missionDatas.Add(data);
@@ -29,6 +34,10 @@ public class MissionData
 {
     public string Name;
     string FailQuote;
+    public MissionData(string nimi)
+    {
+        Name = nimi;
+    }
 }
 
 public interface SendData
