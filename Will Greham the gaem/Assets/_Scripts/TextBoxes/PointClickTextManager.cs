@@ -7,6 +7,7 @@ public class PointClickTextManager : TextManager, IPointerClickHandler, IPointer
     [SerializeField] Sprite mouseOverSprite;
     private void Update()
     {
+        base.Update();
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangeLine();
@@ -15,10 +16,9 @@ public class PointClickTextManager : TextManager, IPointerClickHandler, IPointer
 
     public void OnPointerClick(PointerEventData eventData)
     { 
-        if(textActive == false)
-        {
-            Open();
-        }
+
+         Open();
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)

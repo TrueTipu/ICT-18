@@ -24,11 +24,19 @@ public abstract class TextManager : MonoBehaviour
     int lineIndex;
 
 
-    private void Update()
+    protected void Update()
     {
         if (textActive == true)
         {
-            Invoke("Close", 3f);
+            if (lines.Length > lineIndex)
+            {
+                if (text.text == lines[lineIndex])
+                {
+                    Invoke("Close", 3f);
+                }
+                else CancelInvoke();
+            }
+            else Invoke("Close", 3f);
         }
         else CancelInvoke();
     }

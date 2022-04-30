@@ -15,6 +15,7 @@ public class MissionDataWinScreen : MonoBehaviour
     [SerializeField] Transform panel;
     [SerializeField] Transform panel2;
 
+    [SerializeField] GameObject wonScreen;
 
     public void Init()
     {
@@ -27,14 +28,15 @@ public class MissionDataWinScreen : MonoBehaviour
         List<MissionData> _data = MissionDataManager.Instance.getData();
         for(int i = 0; i < _data.Count; i++)
         {
-            UpdatePanel(_data[i], textFieldTemplateGrey, panel2);
-            MissionData correct;
-            if (i >= correctDatas.Count)
+            UpdatePanel(_data[i], textFieldTemplateGrey, panel2); //hard mode panel
+            MissionData correct; 
+            if (i >= correctDatas.Count) //siltä varalta että pelaaja tekee useamman action kuin listassa
             {
                 correct = new MissionData("-");
             }
             else correct = correctDatas[i];
 
+            //aloitetaan varsinainen tarkistus
             if(_data[i].Name == correct.Name && noError)
             {
                 UpdatePanel(_data[i], textFieldTemplateGreen, panel);
@@ -48,6 +50,10 @@ public class MissionDataWinScreen : MonoBehaviour
             {
                 UpdatePanel(_data[i], textFieldTemplateGrey, panel);
             }
+        }
+        if (noError)
+        {
+            wonScreen.SetActive(true);
         }
     }
 

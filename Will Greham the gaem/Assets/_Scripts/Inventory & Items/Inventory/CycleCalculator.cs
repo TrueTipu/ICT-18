@@ -56,6 +56,7 @@ public class CycleCalculator : MonoBehaviour
         {
             if(i < count)
             {
+                float fixedRotation = -1 * (rotation + slotRotate); //lasketaan fixi suoristukseen
                 //muutetaan taustan koko ja rotaatio
                 Image img = slot.Image;
                 img.gameObject.SetActive(true);
@@ -66,6 +67,9 @@ public class CycleCalculator : MonoBehaviour
                 //lasketaan keskikohdan rotaatio
                 slot.SlotParent.gameObject.SetActive(true);
                 slot.SlotParent.localEulerAngles = new Vector3(0, 0, slotRotate);
+
+                //asetetaan fixi
+                slot.SlotPos.localEulerAngles = new Vector3(0, 0, fixedRotation);
             }
             else
             {
