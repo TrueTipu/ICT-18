@@ -82,6 +82,7 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
             else
             {
                 //aukea
+                AudioManager.Instance.Play("Door");
                 Debug.Log("auki");
                 Destroy(gameObject);
             }

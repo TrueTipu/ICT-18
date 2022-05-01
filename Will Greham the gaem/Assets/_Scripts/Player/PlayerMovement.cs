@@ -35,6 +35,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] List<Item> startItems;
 
+    //for audio(/animations)
+    bool moving = false;
+    string name;
 
     private void Start()
     {
@@ -67,6 +70,16 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Hit();
+        }
+        if(moving == false && (dir != 0 || dirY != 0))
+        {
+            moving = true;
+            name = AudioManager.Instance.Randomize(new string[] { "PlayerRun1", "PlayerRun2" });
+        }
+        else if(moving == true && (dir == 0 && dirY == 0))
+        {
+            AudioManager.Instance.Stop(name);
+            moving = false;
         }
         
     }
