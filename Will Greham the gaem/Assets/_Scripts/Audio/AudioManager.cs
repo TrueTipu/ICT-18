@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 public class AudioManager : PersistentSingleton<AudioManager>
 {
     public Audio[] sounds;
@@ -16,17 +17,13 @@ public class AudioManager : PersistentSingleton<AudioManager>
             s.source.loop = s.loop;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
-
         }
     }
-
     public void Stop(string audioName)
     {
         Audio s = Array.Find(sounds, sound => sound.audioName == audioName);
 
         s.source.Stop();
-
-
     }
     public string Randomize(string[] names)
     {
@@ -39,7 +36,5 @@ public class AudioManager : PersistentSingleton<AudioManager>
        Audio s = Array.Find(sounds, sound => sound.audioName == audioName);
 
         s.source.Play();
-
-
     }
 }

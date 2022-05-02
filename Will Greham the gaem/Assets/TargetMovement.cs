@@ -14,6 +14,7 @@ public class TargetMovement : MonoBehaviour, IHittable, SendData
         {
             //restart
             print("kuolit");
+            Game_Manager.Instance.SetGameOver();
         }
     }
 

@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     //for audio(/animations)
     bool moving = false;
-    string name;
+    string name = "Player_Run1";
 
     private void Start()
     {
@@ -74,10 +74,11 @@ public class PlayerMovement : MonoBehaviour
         if(moving == false && (dir != 0 || dirY != 0))
         {
             moving = true;
-            name = AudioManager.Instance.Randomize(new string[] { "PlayerRun1", "PlayerRun2" });
+            name = AudioManager.Instance.Randomize(new string[] { "Player_Run1", "Player_Run2" });
         }
         else if(moving == true && (dir == 0 && dirY == 0))
         {
+            Debug.Log(name);
             AudioManager.Instance.Stop(name);
             moving = false;
         }

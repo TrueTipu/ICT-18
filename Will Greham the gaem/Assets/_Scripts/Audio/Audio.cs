@@ -18,6 +18,6 @@ public class Audio
     [Range(.1f, 3f)]
     public float pitch = 1;
 
-    [HideInInspector]
+
     public AudioSource source;
 }

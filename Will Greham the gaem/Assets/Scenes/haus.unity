@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreen: {fileID: 186633068}
+  LoseScreen: {fileID: 5246236962688358367}
 --- !u!1 &332539826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,8 +1127,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052584429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.9, y: -3.3, z: 165.04915}
-  m_LocalScale: {x: 27.680712, y: 21.883467, z: 1}
+  m_LocalPosition: {x: -6.1044, y: -5.8242, z: 165.04915}
+  m_LocalScale: {x: 31.643148, y: 26.931894, z: 1}
   m_Children: []
   m_Father: {fileID: 1498575988}
   m_RootOrder: 16
@@ -1688,8 +1689,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177001803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1592, y: -0.074, z: 0}
-  m_LocalScale: {x: 16.787313, y: 11.116704, z: 1}
+  m_LocalPosition: {x: 1.2004, y: -0.1976, z: 0}
+  m_LocalScale: {x: 16.868814, y: 11.3642, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -4223,6 +4224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5191738357293094141, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5246236961627417176, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4311,8 +4316,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5246236962604424374, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236963271234246, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236963278033143, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707556684524100203, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941057591903597062, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+--- !u!1 &5246236962688358367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5191738357293094141, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+  m_PrefabInstance: {fileID: 5246236962688358366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6538826545624969784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4422,11 +4452,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7347032361469001241, guid: 85e4b0d9ca461f8408de1fc15c5383c6, type: 3}
       propertyPath: sounds.Array.data[0].audioName
-      value: PlayerRun1
+      value: Player_Run1
       objectReference: {fileID: 0}
     - target: {fileID: 7347032361469001241, guid: 85e4b0d9ca461f8408de1fc15c5383c6, type: 3}
       propertyPath: sounds.Array.data[1].audioName
-      value: PlayerRun2
+      value: Player_Run2
       objectReference: {fileID: 0}
     - target: {fileID: 7347032361469001241, guid: 85e4b0d9ca461f8408de1fc15c5383c6, type: 3}
       propertyPath: sounds.Array.data[2].audioName
