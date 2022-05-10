@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class PointClickTextManager : TextManager, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] Sprite mouseOverSprite;
+    [SerializeField] UnityEvent Event;
     private void Update()
     {
         base.Update();
@@ -16,7 +18,10 @@ public class PointClickTextManager : TextManager, IPointerClickHandler, IPointer
 
     public void OnPointerClick(PointerEventData eventData)
     { 
-
+        if(Event != null)
+        {
+            Event.Invoke();
+        }
          Open();
 
     }

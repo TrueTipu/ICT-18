@@ -42,6 +42,7 @@ public abstract class TextManager : MonoBehaviour
     }
     protected void Open()
     {
+        CancelInvoke();
         localText = true;
         textActive = true;
         lineIndex = 0;
@@ -68,6 +69,7 @@ public abstract class TextManager : MonoBehaviour
 
     protected void Close()
     {
+        CancelInvoke();
         localText = false;
         textActive = false;
         lineIndex = 0;
