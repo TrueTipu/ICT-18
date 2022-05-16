@@ -48,15 +48,14 @@ public class TutorialTexts : MonoBehaviour
 
         while(message1 == false)
         {
-            Debug.Log(code.Equals(new int[] { 1, 1, 1 }));
-            if (code.Equals(new int[] { 1, 1, 1 }) && huone.activeSelf)
+
+            if (code[0] == 1 && code[1] == 1 && code[2] == 1 && huone.activeSelf)
             {
                 message1 = true;
             }
             yield return null;
         }
 
-        TextBoxActivator.Guide("Voit nyt k‰‰nty‰ n‰p‰ytt‰m‰ll‰ nuolia huoneen sivuilla");
         arrowActivate1.SetActive(true);
         arrowActivate2.SetActive(true);
 
@@ -64,6 +63,7 @@ public class TutorialTexts : MonoBehaviour
         while (message2 == false)
         {
 
+            TextBoxActivator.Guide("Voit nyt k‰‰nty‰ n‰p‰ytt‰m‰ll‰ nuolia huoneen sivuilla");
             yield return null;
         }
 

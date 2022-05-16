@@ -6,7 +6,7 @@ public class TargetMovement : MonoBehaviour, IHittable, SendData
     [SerializeField] Transform[] waypoints;
     [SerializeField] float moveSpeed = 2f;
 
-
+    [SerializeField]bool level1;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -87,7 +87,15 @@ public class TargetMovement : MonoBehaviour, IHittable, SendData
         print("död");
         MissionDataManager.Instance.AddData(data);
         MissionDataManager.Instance.AddData(data2);
-        Game_Manager.Instance.Win();
+        if(level1)
+        {
+            Game_Manager.Instance.Win();
+        }
+        else
+        {
+            Game_Manager.Instance.AddDeath();
+        }
+
         Destroy(gameObject);
     }
 }

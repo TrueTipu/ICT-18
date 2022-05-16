@@ -7,9 +7,19 @@ public class Game_Manager : Singleton<Game_Manager>
 {
     [SerializeField] MissionDataWinScreen winScreen;
     [SerializeField] GameObject LoseScreen;
+
+    int deaths = 0;
     public void Win()
     {
         Invoke("VictoryActivate", 3f);
+    }
+    public void AddDeath()
+    {
+        deaths += 1;
+        if(deaths == 3)
+        {
+            Win();
+        }
     }
 
     void VictoryActivate()

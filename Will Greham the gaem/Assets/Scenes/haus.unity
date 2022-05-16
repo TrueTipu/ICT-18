@@ -494,7 +494,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6d2ffb598db1a254b8d025f5c88c4e94, type: 3}
   m_Color: {r: 0.24528301, g: 0.23926663, b: 0.23926663, a: 1}
   m_FlipX: 0
@@ -1361,7 +1361,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c557bff5ad1375d47a4f3ff2757e1c91, type: 3}
-  m_Color: {r: 0.6509434, g: 0.3709149, b: 0.6253183, a: 1}
+  m_Color: {r: 0.55135196, g: 0.6509804, b: 0.37254903, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1984,6 +1984,10 @@ PrefabInstance:
     - target: {fileID: 3372923419276464590, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3372923419879961225, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
@@ -3453,8 +3457,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678630589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.41, y: 2.82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.0109, y: 3.2191, z: 0}
+  m_LocalScale: {x: 0.5565564, y: 0.5565564, z: 0.5565564}
   m_Children: []
   m_Father: {fileID: 1498575988}
   m_RootOrder: 21
@@ -3526,7 +3530,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 26b92763532b84147bd7fcfbf6c14df1, type: 3}
-  m_Color: {r: 0.0862745, g: 0.2949332, b: 0.3764706, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3710,6 +3714,7 @@ MonoBehaviour:
   - {fileID: 1493769165}
   - {fileID: 1311813630}
   moveSpeed: 0.5
+  level1: 1
   _data:
     Name: 'Tapoit Hahmon aseella:'
   _data2:
@@ -4715,6 +4720,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2628830649233094076, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.010986328
+      objectReference: {fileID: 0}
     - target: {fileID: 5191738357293094141, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4806,6 +4815,18 @@ PrefabInstance:
     - target: {fileID: 5246236961627417180, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236961627417180, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236962164277390, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236962259668674, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.010986328
       objectReference: {fileID: 0}
     - target: {fileID: 5246236962604424374, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: m_IsActive
