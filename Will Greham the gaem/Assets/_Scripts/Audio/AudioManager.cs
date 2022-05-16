@@ -4,8 +4,9 @@ using UnityEngine;
 using System;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
-public class AudioManager : PersistentSingleton<AudioManager>
+public class AudioManager : Singleton<AudioManager>
 {
+
     public Audio[] sounds;
     protected override void Awake()
     {
@@ -18,6 +19,7 @@ public class AudioManager : PersistentSingleton<AudioManager>
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }
+        DontDestroyOnLoad(gameObject);
     }
     public void Stop(string audioName)
     {
@@ -34,7 +36,7 @@ public class AudioManager : PersistentSingleton<AudioManager>
     public void Play(string audioName)
     {
        Audio s = Array.Find(sounds, sound => sound.audioName == audioName);
-
+        Debug.Log(audioName+": "+s.clip+": "+ s.source);
         s.source.Play();
     }
 }
