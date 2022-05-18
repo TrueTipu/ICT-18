@@ -28,7 +28,7 @@ public class PointClickTextManager : TextManager, IPointerClickHandler, IPointer
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Cursor.SetCursor(mouseOverSprite.texture, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(mouseOverSprite.texture, mouseOverSprite.pivot, CursorMode.Auto);
     }
 
     public void OnPointerExit(PointerEventData eventData)
