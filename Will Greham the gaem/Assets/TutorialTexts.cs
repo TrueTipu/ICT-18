@@ -26,6 +26,7 @@ public class TutorialTexts : MonoBehaviour
         code[index] = 1;
     }
 
+
     public void Arrow()
     {
         message2 = true;
@@ -69,6 +70,7 @@ public class TutorialTexts : MonoBehaviour
 
         TextBoxActivator.Guide("Selvit‰ lis‰‰ tietoa tutkimalla aseita, kun koet olevasi valmis matkaa menneisyyteen toteuttamaan tekosi ruudun oikeasta alalaidasta");
         button.SetActive(true);
+
     }
 
 
