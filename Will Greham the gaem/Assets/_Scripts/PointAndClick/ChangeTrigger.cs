@@ -22,7 +22,7 @@ public class ChangeTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Cursor.SetCursor(mouseOverSprite.texture, Vector2.zero, CursorMode.ForceSoftware);
+        Cursor.SetCursor(mouseOverSprite.texture, mouseOverSprite.pivot, CursorMode.ForceSoftware);
     }
 
     public void OnPointerExit(PointerEventData eventData)
