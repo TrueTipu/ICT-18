@@ -7,6 +7,7 @@
 /// </summary>
 public abstract class StaticInstance<T> : MonoBehaviour where T : MonoBehaviour
 {
+    [SerializeField]
     public static T Instance { get; private set; }
     protected virtual void Awake() => Instance = this as T;
 
@@ -25,7 +26,7 @@ public abstract class Singleton<T> : StaticInstance<T> where T : MonoBehaviour
 {
     protected override void Awake()
     {
-        if (Instance != null) Destroy(gameObject);
+        if (Instance != null) { Destroy(gameObject); return; }
         base.Awake();
     }
 }
