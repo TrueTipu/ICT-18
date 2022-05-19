@@ -243,7 +243,7 @@ PrefabInstance:
     - target: {fileID: 5381955761468738, guid: 411dce7314cd7274790bc968b4a945ad, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 206775489}
+      objectReference: {fileID: 1784109513}
     - target: {fileID: 5381955761468738, guid: 411dce7314cd7274790bc968b4a945ad, type: 3}
       propertyPath: mouseOverSprite
       value: 
@@ -1157,7 +1157,7 @@ PrefabInstance:
     - target: {fileID: 5381955761468738, guid: 411dce7314cd7274790bc968b4a945ad, type: 3}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 1671059417}
+      objectReference: {fileID: 140532360}
     - target: {fileID: 5381955761468738, guid: 411dce7314cd7274790bc968b4a945ad, type: 3}
       propertyPath: mouseOverSprite
       value: 
@@ -1384,7 +1384,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 34b6a8372c9825a47a9c16afc3e464ae, type: 3}
     - target: {fileID: 6964670149322257231, guid: d6ebda4818b41c64ab061812a1c9e8f5, type: 3}
       propertyPath: lines.Array.data[0]
-      value: There are some fingerprints but they seem to be the victim's.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6964670149322257234, guid: d6ebda4818b41c64ab061812a1c9e8f5, type: 3}
       propertyPath: m_Pivot.x
@@ -1615,7 +1615,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 34b6a8372c9825a47a9c16afc3e464ae, type: 3}
     - target: {fileID: 6964670149322257231, guid: d6ebda4818b41c64ab061812a1c9e8f5, type: 3}
       propertyPath: lines.Array.data[0]
-      value: There are some fingerprints but they seem to be the victim's.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6964670149322257234, guid: d6ebda4818b41c64ab061812a1c9e8f5, type: 3}
       propertyPath: m_Pivot.x
