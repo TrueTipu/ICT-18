@@ -38,9 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: alla
+    uniqueID: 3736355079
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: "P\xE4\xE4ll\xE4"
-    uniqueID: 3736355079
     locked: 0
