@@ -29,6 +29,7 @@ public class WorldItem : PhysicalItem, ButtonIcon
         {
             inTouch = true;
             collider = collision;
+            Debug.Log("mit");
         }
         
     }

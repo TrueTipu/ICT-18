@@ -40,6 +40,7 @@ public abstract class TextManager : MonoBehaviour
         }
         else CancelInvoke();
     }
+
     protected void Open()
     {
         CancelInvoke();
