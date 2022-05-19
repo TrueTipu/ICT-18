@@ -76,7 +76,7 @@ MonoBehaviour:
   light: {fileID: 0}
   _iconObject: {fileID: 14911143902423863}
   _data:
-    Name: You turned the lights off
+    Name: "K\xE4ytit katkaisinta"
 --- !u!212 &4428916280446449341
 SpriteRenderer:
   m_ObjectHideFlags: 0
