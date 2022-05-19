@@ -207,3 +207,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 45425d6b52ad0ae49971e791107c5c55, type: 2}
   _iconObject: {fileID: 5241158971335747705}
+  _data:
+    Name: 'You picked up an item: '
