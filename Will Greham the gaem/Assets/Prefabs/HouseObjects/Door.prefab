@@ -126,9 +126,9 @@ MonoBehaviour:
   locked: 1
   _iconObject: {fileID: 6619966154985259067}
   _data:
-    Name: Ovi murrettu
+    Name: You lockpicked the door
   _data2:
-    Name: Ovi tuhottu
+    Name: You shot the lock
 --- !u!1 &6619966154985259067
 GameObject:
   m_ObjectHideFlags: 0

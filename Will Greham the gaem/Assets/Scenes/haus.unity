@@ -669,7 +669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578115861}
   m_Layer: 0
-  m_Name: "Keitti\xF6p\xF6yt\xE4"
+  m_Name: Kitchen table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2454,7 +2454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311813630}
   m_Layer: 0
-  m_Name: Sohva
+  m_Name: Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2903,7 +2903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1493769165}
   m_Layer: 0
-  m_Name: Matto
+  m_Name: Carpet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3110,11 +3110,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6619966153562557709, guid: bcc3ec46885bc5b44b7d3ccc65a9a29a, type: 3}
       propertyPath: _data.Name
-      value: Sivu Ovi murrettu
+      value: You lockpicked the back door
       objectReference: {fileID: 0}
     - target: {fileID: 6619966153562557709, guid: bcc3ec46885bc5b44b7d3ccc65a9a29a, type: 3}
       propertyPath: _data2.Name
-      value: Sivu Ovi tuhottu
+      value: you shot the lock of the back door
       objectReference: {fileID: 0}
     - target: {fileID: 6619966153562557710, guid: bcc3ec46885bc5b44b7d3ccc65a9a29a, type: 3}
       propertyPath: m_Name
@@ -3378,7 +3378,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: fcc1ed679f35f834ba31f9b4ae002a4a, type: 2}
     - target: {fileID: 7503601794370742014, guid: a52eb0e38ecda6748ba7b1a8285eb8df, type: 3}
       propertyPath: _data.Name
-      value: 'Otit esineen laatikosta:'
+      value: 'You picked an item from the drawer:'
       objectReference: {fileID: 0}
     - target: {fileID: 7503601794370742015, guid: a52eb0e38ecda6748ba7b1a8285eb8df, type: 3}
       propertyPath: m_RootOrder
@@ -3593,7 +3593,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 900e5e277ddbcb741b2042396296f5a9, type: 2}
     - target: {fileID: 7503601794370742014, guid: a52eb0e38ecda6748ba7b1a8285eb8df, type: 3}
       propertyPath: _data.Name
-      value: 'Otit esineen laatikosta:'
+      value: 'You took the item:'
       objectReference: {fileID: 0}
     - target: {fileID: 7503601794370742015, guid: a52eb0e38ecda6748ba7b1a8285eb8df, type: 3}
       propertyPath: m_RootOrder
@@ -4521,6 +4521,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6619966153562557709, guid: bcc3ec46885bc5b44b7d3ccc65a9a29a, type: 3}
+      propertyPath: _data.Name
+      value: You lockpicked the front door
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619966153562557709, guid: bcc3ec46885bc5b44b7d3ccc65a9a29a, type: 3}
+      propertyPath: _data2.Name
+      value: You shot the lock of the front door
+      objectReference: {fileID: 0}
     - target: {fileID: 6619966153562557710, guid: bcc3ec46885bc5b44b7d3ccc65a9a29a, type: 3}
       propertyPath: m_Name
       value: Door (1)
@@ -4827,6 +4835,18 @@ PrefabInstance:
     - target: {fileID: 5246236962259668674, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.010986328
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236962604424370, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: correctDatas.Array.data[0].Name
+      value: You lockpicked the back door
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236962604424370, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: correctDatas.Array.data[1].Name
+      value: You picked an item from the drawer:Knife
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236962604424370, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: correctDatas.Array.data[3].Name
+      value: Kohde murhattiinkohdassa:Carpet
       objectReference: {fileID: 0}
     - target: {fileID: 5246236962604424374, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: m_IsActive
