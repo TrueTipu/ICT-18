@@ -19,6 +19,8 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
     [SerializeField]MissionData _data;
     [SerializeField] MissionData _data2;
 
+    [SerializeField] BoxCollider2D boxCollider2D;
+
     public MissionData data { get { return _data; } }
     public MissionData data2 { get { return _data2; } }
 
@@ -38,7 +40,7 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
         if (damage.type <= DamageData.WeaponType.Medium && locked)
         {
             locked = false;
-            TextBoxActivator.Guide("Mursit oven.");
+            TextBoxActivator.Guide("You broke the lock.");
             MissionDataManager.Instance.AddData(data);
             //tähän hajoamisanimaatio/ääni
         }
@@ -77,14 +79,16 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
             if (locked) //lisää tähän avain myöhempiin kenttiin
             {
                 Debug.Log("kiinni");
-                TextBoxActivator.Guide("Ovi on lukossa.");
+                TextBoxActivator.Guide("Door is locked.");
             }
             else
             {
                 //aukea
                 AudioManager.Instance.Play("Door");
                 Debug.Log("auki");
-                Destroy(gameObject);
+                boxCollider2D.enabled = false;
+                transform.Rotate(new Vector3(0,0,90));
+                transform.position = new Vector3(transform.position.x - 1f, transform.position.y - 0.5f);
             }
         }
         if (inTouch)

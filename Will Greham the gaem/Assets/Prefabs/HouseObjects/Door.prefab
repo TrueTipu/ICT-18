@@ -129,6 +129,7 @@ MonoBehaviour:
     Name: You lockpicked the door
   _data2:
     Name: You shot the lock
+  boxCollider2D: {fileID: 6619966153562557698}
 --- !u!1 &6619966154985259067
 GameObject:
   m_ObjectHideFlags: 0
