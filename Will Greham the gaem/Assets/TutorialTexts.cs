@@ -34,15 +34,11 @@ public class TutorialTexts : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        TextBoxActivator.Guide("Tervetuloa tutoriaaliin!");
+        TextBoxActivator.Guide("Welcome to the tutorial!");
         yield return new WaitForSeconds(2);
-        TextBoxActivator.Guide("Sinun pit‰‰ selvitt‰‰ aluksi mit‰ on tapahtunut, (Edist‰ Dialogia painamalla Q)");
-        while (!Input.GetKey(KeyCode.Q))
-        {
-            TextBoxActivator.Guide("Sinun pit‰‰ selvitt‰‰ aluksi mit‰ on tapahtunut, (Edist‰ Dialogia painamalla Q)");
-            yield return null;
-        }
-        TextBoxActivator.Guide("Aloita tutkimalla kaikki ovet (voit zoomata ja tutkia ovia klikkaamalla suurennuslasin ilmestyess‰)");
+        TextBoxActivator.Guide("First you need to inspect what has happened");
+        yield return new WaitForSeconds(1);
+        TextBoxActivator.Guide("Start by checking the front doors one by one, click the door while you see magnifying glass");
         doorActivate1.SetActive(true);
         doorActivate2.SetActive(true);
         doorActivate3.SetActive(true);
@@ -64,11 +60,12 @@ public class TutorialTexts : MonoBehaviour
         while (message2 == false)
         {
 
-            TextBoxActivator.Guide("Voit nyt k‰‰nty‰ n‰p‰ytt‰m‰ll‰ nuolia huoneen sivuilla");
+            TextBoxActivator.Guide("You can now explore other parts of the room by clicking arrows on the side of the screen");
             yield return null;
         }
 
-        TextBoxActivator.Guide("Selvit‰ lis‰‰ tietoa tutkimalla aseita, kun koet olevasi valmis matkaa menneisyyteen toteuttamaan tekosi ruudun oikeasta alalaidasta");
+        TextBoxActivator.Guide("Gather more information by checking weapons and shooting range, when you feel ready just click the progress button on bottom left");
+        yield return new WaitForSeconds(2);
         button.SetActive(true);
 
     }

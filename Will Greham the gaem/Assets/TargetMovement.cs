@@ -86,6 +86,7 @@ public class TargetMovement : MonoBehaviour, IHittable, SendData
     {
         print("död");
         MissionDataManager.Instance.AddData(data);
+        if(data2 != null)
         MissionDataManager.Instance.AddData(data2);
         if(level1)
         {

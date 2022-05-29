@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WorldItem : PhysicalItem, ButtonIcon
+public class WorldItem : PhysicalItem, ButtonIcon, SendData
 {
     bool inTouch = false;
     Collider2D collider;
@@ -16,6 +16,10 @@ public class WorldItem : PhysicalItem, ButtonIcon
         get { return _iconObject; }
         private set { _iconObject = value; }
     }
+
+    [SerializeField] MissionData _data;
+
+    public MissionData data { get { return _data; } private set { _data = value; } }
 
     protected override IEnumerator LateStart()
     {
@@ -64,6 +68,8 @@ public class WorldItem : PhysicalItem, ButtonIcon
         if (!player.GetInventory().CheckMax())
         {
             player.GetInventory().ItemAdded(itemData);
+            data.Name = data.Name + itemData.Name();
+            MissionDataManager.Instance.AddData(data);
             Destroy(gameObject);
         }
         else return;
