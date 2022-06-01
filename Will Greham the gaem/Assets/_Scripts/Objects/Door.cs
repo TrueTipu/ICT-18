@@ -80,12 +80,13 @@ public class Door : MonoBehaviour, IHittable, ButtonIcon, SendData
             {
                 Debug.Log("kiinni");
                 TextBoxActivator.Guide("Door is locked.");
+                AudioManager.Instance.Play("DoorLock");
             }
             else
             {
                 //aukea
                 AudioManager.Instance.Play("Door");
-                Debug.Log("auki");
+                //Debug.Log("auki");
                 boxCollider2D.enabled = false;
                 transform.Rotate(new Vector3(0,0,90));
                 transform.position = new Vector3(transform.position.x - 1f, transform.position.y - 0.5f);

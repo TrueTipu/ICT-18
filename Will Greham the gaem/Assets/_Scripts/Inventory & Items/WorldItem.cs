@@ -33,7 +33,7 @@ public class WorldItem : PhysicalItem, ButtonIcon, SendData
         {
             inTouch = true;
             collider = collision;
-            Debug.Log("mit");
+           // Debug.Log("mit");
         }
         
     }
@@ -67,6 +67,7 @@ public class WorldItem : PhysicalItem, ButtonIcon, SendData
     {
         if (!player.GetInventory().CheckMax())
         {
+            AudioManager.Instance.Play("PickUp");
             player.GetInventory().ItemAdded(itemData);
             data.Name = data.Name + itemData.Name();
             MissionDataManager.Instance.AddData(data);

@@ -44,6 +44,7 @@ public class MissionDataWinScreen : MonoBehaviour
             else if(noError && !ContainsStatus(correctDatas, _data[i]))
             {
                 noError = false;
+                Debug.Log(_data[i].Name);
                 UpdatePanel(_data[i], textFieldTemplateRed, panel);
             }
             else

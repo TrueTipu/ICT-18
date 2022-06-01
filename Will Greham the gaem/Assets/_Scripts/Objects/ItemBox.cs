@@ -6,6 +6,7 @@ public class ItemBox : PhysicalItem, ButtonIcon, SendData
 {
     bool inTouch = false;
     Collider2D collider;
+    [SerializeField] Lock caseLock;
 
     [SerializeField]GameObject _iconObject;
     public GameObject IconObect {
@@ -44,6 +45,14 @@ public class ItemBox : PhysicalItem, ButtonIcon, SendData
     {
         if (Input.GetKeyDown(KeyCode.E) && inTouch == true)
         {
+            if(caseLock != null)
+            {
+                if(!caseLock.open)
+                {
+                    caseLock.ShowUI();
+                    return;
+                }
+            }
             PickUp(collider.GetComponent<PlayerMovement>());
         }
         if (inTouch)
@@ -59,6 +68,7 @@ public class ItemBox : PhysicalItem, ButtonIcon, SendData
     {
         if (!player.GetInventory().CheckMax())
         {
+            AudioManager.Instance.Play("PickUp");
             player.GetInventory().ItemAdded(itemData);
             this.enabled = false;
             data.Name = data.Name + itemData.Name();

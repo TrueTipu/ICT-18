@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
     bool moving = false;
     string name = "Player_Run1";
 
+    public bool HasBody { get; private set; }
+    Body body;
+
     private void Start()
     {
         inventory.Init(this, handItem);
@@ -69,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (HasBody) DropBody();
             Hit();
         }
         if(moving == false && (dir != 0 || dirY != 0))
@@ -78,12 +83,33 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(moving == true && (dir == 0 && dirY == 0))
         {
-            Debug.Log(name);
+            //Debug.Log(name);
             AudioManager.Instance.Stop(name);
             moving = false;
         }
         
     }
+
+    private void DropBody()
+    {
+
+        HasBody = false;
+
+        body.Leave();
+        body = null;
+    }
+
+    public void SetBody(Body body)
+    {
+        if(handItem.itemData != null)
+        {
+            Inventory.ChangeHoldItem(null);
+        }
+        HasBody = true;
+        this.body = body;
+
+    }
+
     void Hit()
     {
         DamageData _dData = damageData;
@@ -91,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (handItem.itemData.itemType == Item.ItemType.Weapon)
             {
+                AudioManager.Instance.Play("Weapon");
                 _dData = handItem.itemData.GetWeapon().damageData;
             }
             if (handItem.itemData.itemType == Item.ItemType.Gun)
@@ -98,6 +125,10 @@ public class PlayerMovement : MonoBehaviour
                 Shoot(handItem.itemData.GetGun().damageData);
                 return;
             }
+        }
+        else
+        {
+            AudioManager.Instance.Play("Hit");
         }
        
 
@@ -132,6 +163,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Shoot(DamageData _dData)
     {
+        AudioManager.Instance.Play("Gun");
         //käytän hitposia, kannattaa vaihtaa varmaa
         RaycastHit2D hit = Physics2D.Raycast(hitPos.position, hitPos.right, _dData.radius, layer);
         Debug.Log(_dData);

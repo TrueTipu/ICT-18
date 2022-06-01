@@ -8,6 +8,17 @@ public class Game_Manager : Singleton<Game_Manager>
     [SerializeField] MissionDataWinScreen winScreen;
     [SerializeField] GameObject LoseScreen;
 
+    [SerializeField] bool chillMusic;
+
+
+    private void Start()
+    {
+        print("" + (!chillMusic));
+        AudioManager.Instance.Stop("" + (!chillMusic));
+        AudioManager.Instance.Play("" + (chillMusic));
+        
+    }
+
     int deaths = 0;
     public void Win()
     {

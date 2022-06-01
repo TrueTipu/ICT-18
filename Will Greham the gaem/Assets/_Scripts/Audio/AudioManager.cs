@@ -36,7 +36,7 @@ public class AudioManager : Singleton<AudioManager>
     public void Play(string audioName)
     {
        Audio s = Array.Find(sounds, sound => sound.audioName == audioName);
-        Debug.Log(audioName+": "+s.clip+": "+ s.source);
+       // Debug.Log(audioName+": "+s.clip+": "+ s.source);
         s.source.Play();
     }
 }

@@ -53,7 +53,7 @@ public class Slot : MonoBehaviour
             {
                 //siirrä inventoryn sisälle funktioon
 
-                WorldItem _newItem = Instantiate(item.itemData.GetItemGround(), inventory.Player.transform.position, Quaternion.identity).GetComponent<WorldItem>();
+                WorldItem _newItem = Instantiate(item.itemData.GetItemGround(), Inventory.Player.transform.position, Quaternion.identity).GetComponent<WorldItem>();
                 _newItem.itemData = item.itemData;
 
                 inventory.ItemRemoved(number);
@@ -61,7 +61,7 @@ public class Slot : MonoBehaviour
             }
             if (Input.GetMouseButtonDown(0))
             {
-                inventory.ChangeHoldItem(item);
+                Inventory.ChangeHoldItem(item);
             }
         }
         else

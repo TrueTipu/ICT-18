@@ -43,4 +43,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66847b2be3525542a40bf21e9312fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - audioName: Player_Run1
+    clip: {fileID: 8300000, guid: 4cf256cf7cd8a4d48b730b48948eece5, type: 3}
+    loop: 1
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Player_Run2
+    clip: {fileID: 8300000, guid: 73ba66a028db7e64dac5cc02b5fa69a5, type: 3}
+    loop: 1
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Door
+    clip: {fileID: 8300000, guid: a9648b83fdc5411458b718f70e314b9f, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Gun
+    clip: {fileID: 8300000, guid: 84cb696517adc2142ae2a9e731cad6a1, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Hit
+    clip: {fileID: 8300000, guid: e3f96df45c033ef429bce73419f5431b, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Weapon
+    clip: {fileID: 8300000, guid: 8b241983ecf123242a8a6735f8590048, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Glass
+    clip: {fileID: 8300000, guid: c47776cdbd0b8574380e34740e0d6b1c, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: DoorLock
+    clip: {fileID: 8300000, guid: 687ac3119c3c5b34189f7d036147efec, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: PickUp
+    clip: {fileID: 8300000, guid: 02b6347f757fc414f9631dcc72cca3e3, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: True
+    clip: {fileID: 8300000, guid: e95ba85a07686a141adddd578acb7c2a, type: 3}
+    loop: 0
+    volume: 0.656
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: False
+    clip: {fileID: 8300000, guid: a29f987993e17934a84b6b1965b9f568, type: 3}
+    loop: 0
+    volume: 0.691
+    pitch: 1
+    source: {fileID: 0}

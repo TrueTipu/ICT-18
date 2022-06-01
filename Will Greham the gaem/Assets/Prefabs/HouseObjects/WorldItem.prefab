@@ -179,8 +179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10908ecec94f0f841b0613013f83ec8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: e8bd2f2137f1b624599bae4cb33d4f03, type: 2}
   _iconObject: {fileID: 5151912983840264299}
+  _data:
+    Name: 'You picked up '
 --- !u!61 &5844744190078403461
 BoxCollider2D:
   m_ObjectHideFlags: 0

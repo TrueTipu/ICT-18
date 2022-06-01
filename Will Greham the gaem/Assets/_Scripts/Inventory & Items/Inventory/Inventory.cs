@@ -15,8 +15,8 @@ public class Inventory : MonoBehaviour
     public Action<Item> ItemAdded;
     public Action<int> ItemRemoved;
 
-    public PlayerMovement Player { get; private set; }
-    public HoldItem HoldItem { get; private set; }
+    public static PlayerMovement Player { get; private set; }
+    public static HoldItem HoldItem { get; private set; }
 
 
     private void Awake()
@@ -54,7 +54,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        Debug.Log("true");
+       // Debug.Log("true");
         int i = isFull.Count;
         FillSlot(slots[i], item);
         isFull.Add(true);
@@ -89,10 +89,12 @@ public class Inventory : MonoBehaviour
         invItem.id = invItem.itemData.GetInstanceID();
     }
 
-    public void ChangeHoldItem(InvItem item)
+    public static void ChangeHoldItem(InvItem item)
     {
+        if (Player.HasBody) { return; }
         if(item == null)
         {
+            HoldItem.itemData = null;
             HoldItem.gameObject.SetActive(false);
             return;
         }

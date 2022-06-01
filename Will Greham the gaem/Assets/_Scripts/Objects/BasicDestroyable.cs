@@ -20,6 +20,7 @@ public class BasicDestroyable : MonoBehaviour, IHittable, SendData
             if (hp < 0)
             {
                 MissionDataManager.Instance.AddData(data);
+                AudioManager.Instance.Play("Glass");
                 Destroy(gameObject);
             }
         }
