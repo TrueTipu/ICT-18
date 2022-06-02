@@ -94,5 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - Jou
-  textActive: 0
-  mouseOverSprite: {fileID: 21300000, guid: d05dd3f93a5434f4cb3906f1589f492d, type: 3}
+  localText: 0
+  mouseOverSprite: {fileID: 21300000, guid: 34b6a8372c9825a47a9c16afc3e464ae, type: 3}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []

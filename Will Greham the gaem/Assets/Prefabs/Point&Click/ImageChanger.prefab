@@ -58,8 +58,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c99d774be9ee28438ff6b385d52c61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseOverSprite: {fileID: 0}
+  mouseOverSprite: {fileID: 21300000, guid: 34b6a8372c9825a47a9c16afc3e464ae, type: 3}
   destination: {fileID: 0}
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2748790141686438617
 MonoBehaviour:
   m_ObjectHideFlags: 0

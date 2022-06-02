@@ -2153,7 +2153,7 @@ PrefabInstance:
     - target: {fileID: 6964670149322257231, guid: d6ebda4818b41c64ab061812a1c9e8f5, type: 3}
       propertyPath: lines.Array.data[0]
       value: So the victim was killed on the carpet... oh wait! Those look like stab
-        wounds.
+        wounds. 28 to be exact!
       objectReference: {fileID: 0}
     - target: {fileID: 6964670149322257234, guid: d6ebda4818b41c64ab061812a1c9e8f5, type: 3}
       propertyPath: m_Pivot.x
