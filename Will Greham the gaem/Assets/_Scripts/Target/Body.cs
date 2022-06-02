@@ -95,6 +95,6 @@ public class Body : MonoBehaviour, ButtonIcon, SendData
             MissionDataManager.Instance.AddData(new MissionData("You threw body out of balcony"));
             Destroy(gameObject);
         }
-        MissionDataManager.Instance.AddData(new MissionData(data.Name + " " + TargetMovement.Distances(rooms, transform.position).name));
+        //MissionDataManager.Instance.AddData(new MissionData(data.Name + " " + TargetMovement.Distances(rooms, transform.position).name));
     }
 }

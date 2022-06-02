@@ -26,10 +26,11 @@ public class MissionDataWinScreen : MonoBehaviour
     {
         bool noError = true;
         List<MissionData> _data = MissionDataManager.Instance.getData();
+        string all = "";
         for(int i = 0; i < _data.Count; i++)
         {
             UpdatePanel(_data[i], textFieldTemplateGrey, panel2); //hard mode panel
-            MissionData correct; 
+
             //if (i >= correctDatas.Count) //siltä varalta että pelaaja tekee useamman action kuin listassa
             //{
             //    correct = new MissionData("-");
@@ -50,6 +51,16 @@ public class MissionDataWinScreen : MonoBehaviour
             else
             {
                 UpdatePanel(_data[i], textFieldTemplateGrey, panel);
+            }
+            all += _data[i].Name;
+
+        }
+        for (int i = 0; i < correctDatas.Count; i++)
+        {
+            if (noError && !ContainsStatus(_data, correctDatas[i]))
+            {
+                noError = false;
+                Debug.Log(_data[i].Name);
             }
         }
         if (noError)
