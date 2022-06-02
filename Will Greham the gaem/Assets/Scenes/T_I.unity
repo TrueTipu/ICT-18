@@ -1352,6 +1352,52 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6964670149322257234, guid: d6ebda4818b41c64ab061812a1c9e8f5, type: 3}
   m_PrefabInstance: {fileID: 900740155}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1189615449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189615451}
+  - component: {fileID: 1189615450}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1189615450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189615449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2dc038d90792224a80f153c63f876dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winScreen: {fileID: 0}
+  LoseScreen: {fileID: 0}
+  chillMusic: 1
+--- !u!4 &1189615451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189615449}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.6431994, y: 0.11160278, z: -136.75479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297813814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,8 +1990,8 @@ RectTransform:
   - {fileID: 1457352299}
   - {fileID: 1650788562}
   - {fileID: 344382527}
-  - {fileID: 134920018}
   - {fileID: 1525346303}
+  - {fileID: 134920018}
   - {fileID: 900740156}
   m_Father: {fileID: 3233527445860806012}
   m_RootOrder: 4
@@ -2481,6 +2527,116 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5381955761468765, guid: 411dce7314cd7274790bc968b4a945ad, type: 3}
   m_PrefabInstance: {fileID: 1692618378}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1763719727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763719729}
+  - component: {fileID: 1763719728}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1763719728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763719727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66847b2be3525542a40bf21e9312fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioName: Player_Run1
+    clip: {fileID: 8300000, guid: 4cf256cf7cd8a4d48b730b48948eece5, type: 3}
+    loop: 1
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Player_Run2
+    clip: {fileID: 8300000, guid: 73ba66a028db7e64dac5cc02b5fa69a5, type: 3}
+    loop: 1
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Door
+    clip: {fileID: 8300000, guid: a9648b83fdc5411458b718f70e314b9f, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Gun
+    clip: {fileID: 8300000, guid: 84cb696517adc2142ae2a9e731cad6a1, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Hit
+    clip: {fileID: 8300000, guid: e3f96df45c033ef429bce73419f5431b, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Weapon
+    clip: {fileID: 8300000, guid: 8b241983ecf123242a8a6735f8590048, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: Glass
+    clip: {fileID: 8300000, guid: c47776cdbd0b8574380e34740e0d6b1c, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: DoorLock
+    clip: {fileID: 8300000, guid: 687ac3119c3c5b34189f7d036147efec, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: PickUp
+    clip: {fileID: 8300000, guid: 02b6347f757fc414f9631dcc72cca3e3, type: 3}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: True
+    clip: {fileID: 8300000, guid: e95ba85a07686a141adddd578acb7c2a, type: 3}
+    loop: 0
+    volume: 0.656
+    pitch: 1
+    source: {fileID: 0}
+  - audioName: False
+    clip: {fileID: 8300000, guid: a29f987993e17934a84b6b1965b9f568, type: 3}
+    loop: 0
+    volume: 0.691
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &1763719729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763719727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5377731, y: -1.6652611, z: -675.48224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1939130348
 PrefabInstance:
   m_ObjectHideFlags: 0
