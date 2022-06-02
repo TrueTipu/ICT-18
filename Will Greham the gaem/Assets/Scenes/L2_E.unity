@@ -475,6 +475,10 @@ PrefabInstance:
       value: Switch (1)
       objectReference: {fileID: 0}
     - target: {fileID: 14911143515340725, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
+      propertyPath: first
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14911143515340725, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
       propertyPath: light
       value: 
       objectReference: {fileID: 1223272045}
@@ -545,37 +549,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3372923419276464577, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
-      propertyPath: speed
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3372923419276464577, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
       propertyPath: startItems.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3372923419276464577, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
-      propertyPath: startItems.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: e8bd2f2137f1b624599bae4cb33d4f03, type: 2}
-    - target: {fileID: 3372923419276464577, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
-      propertyPath: startItems.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: e8bd2f2137f1b624599bae4cb33d4f03, type: 2}
-    - target: {fileID: 3372923419276464577, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
-      propertyPath: startItems.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: e8bd2f2137f1b624599bae4cb33d4f03, type: 2}
-    - target: {fileID: 3372923419276464577, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
-      propertyPath: startItems.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: e8bd2f2137f1b624599bae4cb33d4f03, type: 2}
-    - target: {fileID: 3372923419276464577, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
-      propertyPath: startItems.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: e8bd2f2137f1b624599bae4cb33d4f03, type: 2}
-    - target: {fileID: 3372923419276464577, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
-      propertyPath: startItems.Array.data[6]
-      value: 
-      objectReference: {fileID: 11400000, guid: e8bd2f2137f1b624599bae4cb33d4f03, type: 2}
     - target: {fileID: 3372923419276464578, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -623,10 +599,6 @@ PrefabInstance:
     - target: {fileID: 3372923419276464590, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3372923419879961225, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc9b1108548cb6148a0c4e1ebfd61b5d, type: 3}
@@ -3104,6 +3076,10 @@ PrefabInstance:
     - target: {fileID: 14911143515340724, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
       propertyPath: m_Name
       value: Switch (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 14911143515340725, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
+      propertyPath: first
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 14911143515340725, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
       propertyPath: light
@@ -6307,6 +6283,10 @@ PrefabInstance:
     - target: {fileID: 14911143515340724, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
       propertyPath: m_Name
       value: Switch (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 14911143515340725, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
+      propertyPath: first
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 14911143515340725, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
       propertyPath: light
@@ -12500,6 +12480,10 @@ PrefabInstance:
     - target: {fileID: 14911143515340724, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
       propertyPath: m_Name
       value: Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 14911143515340725, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
+      propertyPath: first
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 14911143515340725, guid: 0a686fe7c3a58ac41ae02f12706a472e, type: 3}
       propertyPath: light
