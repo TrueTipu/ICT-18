@@ -1093,7 +1093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5246236962604424370, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: correctDatas.Array.data[1].Name
-      value: You picked up middle gun
+      value: You picked up middle rifle
       objectReference: {fileID: 0}
     - target: {fileID: 5246236962604424370, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: correctDatas.Array.data[2].Name
