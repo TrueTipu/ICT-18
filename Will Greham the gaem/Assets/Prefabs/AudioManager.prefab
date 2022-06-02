@@ -100,13 +100,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - audioName: True
     clip: {fileID: 8300000, guid: e95ba85a07686a141adddd578acb7c2a, type: 3}
-    loop: 0
+    loop: 1
     volume: 0.656
     pitch: 1
     source: {fileID: 0}
   - audioName: False
     clip: {fileID: 8300000, guid: a29f987993e17934a84b6b1965b9f568, type: 3}
-    loop: 0
+    loop: 1
     volume: 0.691
     pitch: 1
     source: {fileID: 0}

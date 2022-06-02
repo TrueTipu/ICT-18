@@ -4062,7 +4062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5246236962604424370, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: correctDatas.Array.data[3].Name
-      value: 'You killed the target with: gun'
+      value: 'You picked up an item from case: gun'
       objectReference: {fileID: 0}
     - target: {fileID: 5246236962604424370, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: correctDatas.Array.data[4].Name
@@ -14289,7 +14289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   UI: {fileID: 1617851570}
-  code: 02000000020000000400000008000000
+  code: 01000000080000000200000000000000
 --- !u!61 &1426633093679507079
 BoxCollider2D:
   m_ObjectHideFlags: 0

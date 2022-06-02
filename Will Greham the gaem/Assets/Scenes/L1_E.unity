@@ -5685,6 +5685,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5246236962604424374, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236963271234246, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246236963278033143, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
 --- !u!1 &5246236962688358367 stripped
