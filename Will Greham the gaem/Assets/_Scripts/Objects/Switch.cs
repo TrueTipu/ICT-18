@@ -14,7 +14,7 @@ public class Switch : MonoBehaviour, ButtonIcon, SendData
 
     [SerializeField] MissionData _data;
 
-    bool first = false;
+    [SerializeField] bool first = false;
 
     public MissionData data { get { return _data; } private set { _data = value; } }
     public GameObject IconObect

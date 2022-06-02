@@ -144,21 +144,14 @@ public class PlayerMovement : MonoBehaviour
 
     void DirManager()
     {
-        if(dir > 0) {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-        else if (dir < 0)
-        {
-            transform.eulerAngles = new Vector3(0, 0, 180);
-        }
-        else if (dirY > 0)
-        {
-            transform.eulerAngles = new Vector3(0, 0, 90);
-        }
-        else if (dirY < 0)
-        {
-            transform.eulerAngles = new Vector3(0, 0, 270);
-        }
+        if (dir > 0 && dirY == 0) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 270 + 90), 1);
+        if (dir < 0 && dirY == 0) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 90 + 90),1);
+        if (dir == 0 && dirY > 0) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0 + 90), 1);
+        if (dir == 0 && dirY < 0) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 180 + 90), 1);
+        if (dir > 0 && dirY > 0) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 315 + 90), 1);
+        if (dir > 0 && dirY < 0) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 225 + 90), 1);
+        if (dir < 0 && dirY > 0) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 45 + 90), 1);
+        if (dir < 0 && dirY < 0) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 135 + 90), 1);
     }
 
     void Shoot(DamageData _dData)

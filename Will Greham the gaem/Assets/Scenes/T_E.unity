@@ -494,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203892, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203892, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Color.g
@@ -502,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203892, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Color.r
-      value: 0.968729
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203893, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Name
@@ -530,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0957
+      value: 1.0532964
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -538,7 +538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.02
+      value: 0.9928
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1093,7 +1093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5246236962604424370, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: correctDatas.Array.data[1].Name
-      value: You picked up middle gun
+      value: You picked up middle rifle
       objectReference: {fileID: 0}
     - target: {fileID: 5246236962604424370, guid: 73e844ba66485c4429466e3a31be5a54, type: 3}
       propertyPath: correctDatas.Array.data[2].Name
@@ -2412,8 +2412,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482612463}
   m_LocalRotation: {x: 0.011592408, y: 0.011589013, z: -0.70711535, w: 0.7069082}
-  m_LocalPosition: {x: 1.789, y: 4.281, z: 165.27}
-  m_LocalScale: {x: 2.72145, y: 3.1965358, z: 2.5182}
+  m_LocalPosition: {x: 1.7, y: 4.28, z: 165.26}
+  m_LocalScale: {x: 1.8089478, y: 2.1247373, z: 1.6738474}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -2452,18 +2452,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.012803048, y: -0.0027218163}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.487, y: 0.481}
+    oldSize: {x: 0.8371429, y: 0.82285714}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.487, y: 0.481}
+  m_Size: {x: 0.75607234, y: 0.715416}
   m_EdgeRadius: 0
 --- !u!212 &1482612467
 SpriteRenderer:
@@ -2505,7 +2505,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 237b7edfae1a13741919a46cfa759cab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 17216fe803ee78b469fcecdfc810ec49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2614,7 +2614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203892, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203892, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Color.g
@@ -2622,7 +2622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203892, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Color.r
-      value: 0.968729
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203893, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Name
@@ -2631,7 +2631,7 @@ PrefabInstance:
     - target: {fileID: 7635343681229203894, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: itemData
       value: 
-      objectReference: {fileID: 11400000, guid: fcc1ed679f35f834ba31f9b4ae002a4a, type: 2}
+      objectReference: {fileID: 11400000, guid: 900e5e277ddbcb741b2042396296f5a9, type: 2}
     - target: {fileID: 7635343681229203894, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: _iconObject
       value: 
@@ -2646,7 +2646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0957
+      value: 1.0532964
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2654,7 +2654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8666
+      value: 0.8454
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2717,7 +2717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203892, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203892, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Color.g
@@ -2725,12 +2725,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203892, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Color.r
-      value: 0.968729
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203893, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_Name
       value: WorldItem (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7635343681229203894, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c2697e321c5bb14d83a2409214d0a2b, type: 2}
     - target: {fileID: 7635343681229203894, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: _data.Name
       value: 'You picked up middle '
@@ -2745,7 +2749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0957
+      value: 1.0532964
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2753,7 +2757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.98719996
+      value: 0.9613
       objectReference: {fileID: 0}
     - target: {fileID: 7635343681229203895, guid: b63e9d276dd0fc74ea5a021fb5d54acc, type: 3}
       propertyPath: m_LocalPosition.z
